@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 
+	namespace：必须与对应的接口全类名一致
+	id:必须与对应接口的某个对应的方法名一致
+	
+ -->
+<mapper namespace="com.xhs.datasource.demo.mapper.User2Mapper">
+
+	<resultMap type="com.xhs.datasource.demo.model.User" id="user">
+		<id property="id" column="id"/>
+		<result property="openId" column="open_id"/>
+		<result property="userName" column="user_name"/>
+		<result property="mobilePhone" column="mobile_phone"/>
+		<result property="pwdValue" column="pwd_value"/>
+	</resultMap>
+	 <!-- mybsits_config中配置的alias类别名,也可直接配置resultType为类路劲 -->
+	<select id="findUserById" resultMap="user">
+		select * from t_user where id = #{id}
+	</select>
+	<update id="updateUserNameById">
+		update t_user set user_name = #{name} where id = #{id}
+	</update>
+</mapper>

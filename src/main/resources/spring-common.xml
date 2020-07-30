@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xmlns:tx="http://www.springframework.org/schema/tx"
+	   xmlns:task="http://www.springframework.org/schema/task"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+
+
+		http://www.springframework.org/schema/tx
+		http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+		http://www.springframework.org/schema/task 
+		http://www.springframework.org/schema/task/spring-task-4.0.xsd">
+
+	<!-- 1. 数据源 : DriverManagerDataSource -->
+	<!--<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />-->
+		<!--  <property name="url" value="jdbc:mysql://10.10.127.176/weguarddb?characterEncoding=UTF-8" />-->
+	<!--	<property name="url" value="jdbc:mysql://10.162.12.118:3306/weguarddb?characterEncoding=UTF-8" />
+		<property name="username" value="root" />
+		<property name="password"  value="Winkind123"/>
+	</bean>-->
+	
+
+ 	<bean id="user" name="user2,user3,user" class="com.xhs.datasource.demo.model.User"></bean>
+
+</beans>
